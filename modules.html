@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('primedesk_theme');
+      var theme = (saved === 'dark') ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>App Modules &amp; Feature Inventory — PrimeDesk Smart POS</title>
+  <meta name="description" content="Explore all 40+ integrated modules in PrimeDesk Smart POS: POS Checkout, Batch Expiry, Quotations, Invoices, Customer Ledgers, Expenses, Assets, Reports, WhatsApp Assistant and Encrypted Backups.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .module-deep-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      margin-bottom: 32px;
+      backdrop-filter: var(--glass-blur);
+      transition: all var(--transition-normal);
+    }
+    .module-deep-card:hover {
+      border-color: var(--border-glow);
+      box-shadow: var(--shadow-md);
+    }
+    .module-deep-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .module-features-check-list {
+      margin: 18px 0;
+    }
+    .module-features-check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+    }
+    .module-features-check-list li i {
+      color: var(--accent-emerald);
+      margin-top: 4px;
+    }
+    .module-preview-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-card);
+      background: #000;
+      cursor: pointer;
+      position: relative;
+    }
+    .module-preview-box img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      object-position: top;
+      transition: transform 0.4s ease;
+    }
+    .module-preview-box:hover img {
+      transform: scale(1.04);
+    }
+    .module-preview-box .zoom-tag {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 99px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    @media (max-width: 900px) {
+      .module-deep-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-notice-bar" aria-label="Announcement">
+    <span><i class="fas fa-sparkles"></i> <strong>Trial Offer:</strong> Experience all 40+ modules unlocked with our <strong>2-Day On-Demand Free Trial</strong> for both Desktop &amp; Online editions.</span>
+    <a href="contact.html?intent=trial"><i class="fas fa-key"></i> Request Trial</a>
+  </aside>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="PrimeDesk Smart POS Homepage">
+        <img src="assets/images/logo-light.svg" class="brand-logo-light" alt="PrimeDesk Smart POS Logo">
+        <img src="assets/images/logo-white.svg" class="brand-logo-dark" alt="PrimeDesk Smart POS Logo">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Overview</a>
+        <a href="editions.html" class="nav-link">Desktop vs Online</a>
+        <a href="modules.html" class="nav-link active">App Modules</a>
+        <a href="index.html#gallery" class="nav-link">Screenshots</a>
+        <a href="index.html#hardware" class="nav-link">Hardware</a>
+        <a href="index.html#pricing" class="nav-link">Pricing &amp; Trials</a>
+        <a href="contact.html" class="nav-link">Contact &amp; Purchase</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="contact.html?intent=trial" class="btn btn-primary btn-sm"><i class="fas fa-key"></i> Request Trial</a>
+        <button class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header Banner -->
+  <section class="section" style="padding: 60px 0 40px; background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-main) 100%);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 20px;">
+        <span class="section-tag"><i class="fas fa-cubes"></i> Comprehensive Product Catalog</span>
+        <h1 class="section-title">PrimeDesk Smart POS Module Directory</h1>
+        <p class="section-desc">
+          PrimeDesk integrates every facet of retail operations into a coherent, high-velocity system. Every module listed below is engineered for speed, accuracy, and enterprise-grade reliability in both Desktop and Online editions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Dive Modules List -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+
+      <!-- Group 1: Point of Sale & Quick Register -->
+      <div style="margin-bottom: 40px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:42px; height:42px; border-radius:10px; background:var(--theme-primary-soft); color:var(--theme-primary); display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+            <i class="fas fa-cash-register"></i>
+          </div>
+          <div>
+            <h2 style="font-size:1.7rem; font-weight:800;">1. Point of Sale &amp; Rapid Billing</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted);">High-velocity checkout for supermarkets, retail shops, and pharmacies</p>
+          </div>
+        </div>
+
+        <!-- POS Checkout Card -->
+        <div class="module-deep-card" id="pos">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-primary"><i class="fas fa-bolt"></i> High-Speed Core</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">Interactive POS Checkout Register</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                The central heartbeat of your store. Designed for continuous rapid-fire sales with instantaneous barcode scanning, fuzzy keyword search, and flexible multi-tender payment processing.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Multi-Tender Payments:</strong> Split bills across Cash, Credit Sale, Bank Transfer, JazzCash, EasyPaisa, or Online payment.</li>
+                <li><i class="fas fa-check"></i> <strong>Held Receipts &amp; Parking:</strong> Park open carts with a single keystroke to keep lines moving while other customers are rung up.</li>
+                <li><i class="fas fa-check"></i> <strong>Thermal Receipt Printing:</strong> Instant native ESC/POS thermal receipts (58mm &amp; 80mm) with business logo, Urdu/English headers, tax IDs, and barcode footer.</li>
+                <li><i class="fas fa-check"></i> <strong>Wholesale vs Retail Pricing:</strong> Automatically apply customer-tier specific prices and discounts.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/pos.png" data-lightbox-title="POS Checkout Screen Preview">
+                <img src="assets/screenshots/pos.png" alt="POS Checkout Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Invoices & Quotations Card -->
+        <div class="module-deep-card" id="invoices">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-emerald"><i class="fas fa-file-invoice"></i> B2B &amp; Retail</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">Quotations &amp; Sales Invoicing</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                Bridge counter retail with formal B2B sales. Create professional quotations with complete line-item specifications, validity dates, and payment terms, then convert accepted estimates into invoices with one click.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Quotation Lifecycle:</strong> Track statuses: Draft, Sent, Accepted, Rejected, Expired, and Cancelled.</li>
+                <li><i class="fas fa-check"></i> <strong>Tax &amp; Discount Management:</strong> Item-level and whole-invoice percentage or flat discounts, VAT/GST calculation.</li>
+                <li><i class="fas fa-check"></i> <strong>A4 Invoice Formatting:</strong> Clean corporate A4 printing or PDF export ready to email or print.</li>
+                <li><i class="fas fa-check"></i> <strong>Sales Returns &amp; Credit Notes:</strong> Process customer refunds with item condition grading (Good, Damaged, Expired).</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/quotations.png" data-lightbox-title="Quotations Management Preview">
+                <img src="assets/screenshots/quotations.png" alt="Quotations Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Inventory & Warehouse Management -->
+      <div style="margin-bottom: 40px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:42px; height:42px; border-radius:10px; background:var(--accent-amber-soft); color:var(--accent-amber); display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+            <i class="fas fa-boxes-stacked"></i>
+          </div>
+          <div>
+            <h2 style="font-size:1.7rem; font-weight:800;">2. Inventory, Batches &amp; Warehouse Control</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted);">Total control over stock levels, batch lifecycles, and bin locations</p>
+          </div>
+        </div>
+
+        <!-- Product & Barcode Catalog -->
+        <div class="module-deep-card" id="inventory">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-amber"><i class="fas fa-barcode"></i> Catalog Engine</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">Products, Categories &amp; Barcode Management</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                Maintain thousands of inventory items with ease. Configure SKU codes, unit definitions, multi-tier categories, minimum stock safety thresholds, and exact aisle/shelf bin locations.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Automated Barcode Generation:</strong> Print barcode sticker labels directly for unbarcoded goods.</li>
+                <li><i class="fas fa-check"></i> <strong>Reorder Point Alerts:</strong> Color-coded warnings when products hit minimum threshold stock.</li>
+                <li><i class="fas fa-check"></i> <strong>Stock Adjustments Audit:</strong> Log additions &amp; subtractions with strict categorization (theft, damage, correction, returns).</li>
+                <li><i class="fas fa-check"></i> <strong>Location &amp; Bin Tracking:</strong> Direct warehouse staff to the exact physical rack and bin.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/route-products.png" data-lightbox-title="Products Catalog Preview">
+                <img src="assets/screenshots/route-products.png" alt="Products Catalog Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Batch & Expiry Alerts -->
+        <div class="module-deep-card">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-primary"><i class="fas fa-calendar-check"></i> Expiry Protection</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">Batch Numbers &amp; Automated Expiry Alerts</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                Crucial for pharmacies, grocery stores, packaged food distributors, and cosmetics shops. Track every shipment lot by batch number, manufacturing date, and expiry date.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Early Warning Dashboard:</strong> Visual notifications 30, 60, and 90 days before products expire.</li>
+                <li><i class="fas fa-check"></i> <strong>FIFO Depletion:</strong> Automatically suggest or deduct the earliest-expiring batch first.</li>
+                <li><i class="fas fa-check"></i> <strong>Batch Status Lifecycle:</strong> Distinct tracking for Active, Depleted, and Expired batches.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/route-batches.png" data-lightbox-title="Batch and Expiry Tracking Preview">
+                <img src="assets/screenshots/route-batches.png" alt="Batch and Expiry Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 3: Customer Relationship & WhatsApp Assistant -->
+      <div style="margin-bottom: 40px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:42px; height:42px; border-radius:10px; background:rgba(37,211,102,0.12); color:#25d366; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div>
+            <h2 style="font-size:1.7rem; font-weight:800;">3. Customer CRM &amp; WhatsApp Assistant</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted);">Modern customer loyalty, credit ledgers, and digital messaging</p>
+          </div>
+        </div>
+
+        <!-- WhatsApp Assistant Card -->
+        <div class="module-deep-card" id="crm">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-emerald" style="background:#25d366; color:#fff;"><i class="fab fa-whatsapp"></i> WhatsApp Integration</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">WhatsApp Assistant &amp; Customer Engagement</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                Eliminate thermal paper roll costs and impress customers with modern paperless receipts. PrimeDesk connects natively with WhatsApp Web to dispatch invoices, quotations, and account ledger statements in seconds.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Instant Receipt Dispatch:</strong> Click "Send via WhatsApp" right at the POS checkout.</li>
+                <li><i class="fas fa-check"></i> <strong>Payment Due Reminders:</strong> Generate polite, pre-formatted payment reminder messages with outstanding balances.</li>
+                <li><i class="fas fa-check"></i> <strong>Customer Credit Ledgers:</strong> Keep complete history of customer purchases, payments received, and credit limits.</li>
+                <li><i class="fas fa-check"></i> <strong>Salesman Commission:</strong> Track performance by salesman and compute incentive payouts.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/route-whatsappassistant.png" data-lightbox-title="WhatsApp Assistant Screen Preview">
+                <img src="assets/screenshots/route-whatsappassistant.png" alt="WhatsApp Assistant Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 4: Finance, Expenses, Assets & Analytics -->
+      <div style="margin-bottom: 40px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:42px; height:42px; border-radius:10px; background:var(--theme-primary-soft); color:var(--theme-primary); display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <div>
+            <h2 style="font-size:1.7rem; font-weight:800;">4. Financial Management &amp; Analytics Hub</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted);">Track every penny from gross sales down to net profit and owner equity</p>
+          </div>
+        </div>
+
+        <!-- Expenses & Fixed Assets -->
+        <div class="module-deep-card" id="finance">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-primary"><i class="fas fa-wallet"></i> Fiscal Control</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">Expenses, Owner Equity &amp; Fixed Assets</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                A retail business is more than just sales. PrimeDesk tracks operational expenses, owner capital investment, partner drawings, and capital business assets with depreciation logs.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Categorized Expense Tracking:</strong> Organize expenses into Rent, Salaries, Electricity, Packaging, and Custom Categories.</li>
+                <li><i class="fas fa-check"></i> <strong>Manager Approval Rules:</strong> Review pending expenses and approve or reject before they impact P&amp;L.</li>
+                <li><i class="fas fa-check"></i> <strong>Owner Equity &amp; Capital:</strong> Dedicated tracking for owner injections and personal drawings.</li>
+                <li><i class="fas fa-check"></i> <strong>Fixed Business Assets:</strong> Register computers, vehicles, and shop fittings with depreciation schedules.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/route-expenses.png" data-lightbox-title="Expenses Screen Preview">
+                <img src="assets/screenshots/route-expenses.png" alt="Expenses Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reports Hub Card -->
+        <div class="module-deep-card">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-emerald"><i class="fas fa-chart-line"></i> Executive Intelligence</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">Reports Hub &amp; Visual Analytics</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                Real-time business clarity powered by Chart.js. Generate granular sales velocity summaries, profit margin reports by item, inventory valuation, and supplier aging schedules with one click.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Daily / Monthly Sales Velocity:</strong> Spot peak shopping hours and highest-revenue days.</li>
+                <li><i class="fas fa-check"></i> <strong>Net Profit Calculator:</strong> Understand exact profit after deducting purchase costs and operational expenses.</li>
+                <li><i class="fas fa-check"></i> <strong>Export to CSV &amp; PDF:</strong> Seamlessly share audit sheets with your accountant or auditor.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/route-reports.png" data-lightbox-title="Reports Hub Preview">
+                <img src="assets/screenshots/route-reports.png" alt="Reports Hub Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 5: Hardware, LAN Network & Encrypted Backups -->
+      <div style="margin-bottom: 40px;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:24px;">
+          <div style="width:42px; height:42px; border-radius:10px; background:var(--accent-crimson-soft); color:var(--accent-crimson); display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div>
+            <h2 style="font-size:1.7rem; font-weight:800;">5. Multi-User Security &amp; LAN Counters</h2>
+            <p style="font-size:0.9rem; color:var(--text-muted);">Role-based cashier permissions, multi-terminal pairing, and encrypted backups</p>
+          </div>
+        </div>
+
+        <div class="module-deep-card" id="security">
+          <div class="module-deep-grid">
+            <div>
+              <span class="badge badge-amber"><i class="fas fa-network-wired"></i> Multi-Counter LAN</span>
+              <h3 style="font-size:1.45rem; margin:10px 0;">LAN Client Terminals &amp; Encrypted Backups</h3>
+              <p style="color:var(--text-secondary); line-height:1.65; font-size:0.95rem;">
+                Built to scale with your shop's growth. Pair up to 5 cashier workstations on local Wi-Fi, enforce strict role permissions, and rest easy with automatic encrypted SQLite database backups.
+              </p>
+              <ul class="module-features-check-list">
+                <li><i class="fas fa-check"></i> <strong>Role-Based Access:</strong> Separate permissions for Administrator, Cashier, Inventory Manager, and Accountant.</li>
+                <li><i class="fas fa-check"></i> <strong>LAN Terminal Discovery:</strong> Simple local pairing code authorization between main PC and cashier counter terminals.</li>
+                <li><i class="fas fa-check"></i> <strong>Automated Daily Backups:</strong> Encrypted SQLite backup files generated automatically with configurable storage destinations.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="module-preview-box" data-lightbox-src="assets/screenshots/route-lan.png" data-lightbox-title="LAN Clients Setup Preview">
+                <img src="assets/screenshots/route-lan.png" alt="LAN Clients Screen">
+                <div class="zoom-tag"><i class="fas fa-magnifying-glass-plus"></i> Click to Zoom</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- On Demand Trial Call to Action Banner -->
+      <div class="trial-guarantee-banner" style="margin-top: 50px;">
+        <div class="trial-banner-content">
+          <h4><i class="fas fa-key" style="color:var(--theme-primary);"></i> Ready to Test These Modules in Your Shop?</h4>
+          <p>We provide a <strong>2-Day Full Feature Free Trial on demand</strong> for both Desktop and Online editions. Get hands-on experience before making any purchase decision.</p>
+        </div>
+        <a href="contact.html?intent=trial" class="btn btn-primary" style="flex-shrink:0;">
+          <i class="fas fa-bolt"></i> Request 2-Day Trial Now
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Screenshot Lightbox Modal Container -->
+  <div id="screenshotModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="font-size:1.1rem; color:var(--text-primary);">Screenshot Preview</h4>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-img" src="" alt="PrimeDesk Screenshot Zoom">
+      </div>
+    </div>
+  </div>
+
+  <!-- Rich Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/images/logo-white.svg" alt="PrimeDesk Smart POS">
+          </a>
+          <p>
+            The next-generation retail management and point-of-sale ecosystem. Providing 100% offline desktop speed and modern cloud versatility.
+          </p>
+          <div class="footer-edition-pills">
+            <span class="badge badge-primary"><i class="fas fa-desktop"></i> Desktop Edition (Offline)</span>
+            <span class="badge badge-emerald"><i class="fas fa-cloud"></i> Online Edition (Cloud)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="editions.html">Desktop vs Online</a></li>
+            <li><a href="modules.html">40+ App Modules</a></li>
+            <li><a href="index.html#gallery">Screenshot Tour</a></li>
+            <li><a href="index.html#pricing">Lifetime Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Modules</h4>
+          <ul class="footer-links-list">
+            <li><a href="modules.html#pos">POS Checkout &amp; Scanner</a></li>
+            <li><a href="modules.html#inventory">Batches &amp; Expiry Alerts</a></li>
+            <li><a href="modules.html#invoices">Quotations &amp; Billing</a></li>
+            <li><a href="modules.html#crm">WhatsApp Digital Receipts</a></li>
+            <li><a href="modules.html#finance">Expenses &amp; Ledger Audit</a></li>
+            <li><a href="modules.html#security">Encrypted SQLite Backups</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Licensing</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html?intent=trial"><i class="fas fa-key"></i> Request 2-Day Trial</a></li>
+            <li><a href="contact.html?intent=purchase"><i class="fas fa-shopping-cart"></i> Purchase Lifetime License</a></li>
+            <li><a href="contact.html?intent=lan"><i class="fas fa-network-wired"></i> LAN Multi-Counter Add-on</a></li>
+            <li><a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i> Live Chat on WhatsApp</a></li>
+            <li><a href="mailto:support@primedeskpos.com"><i class="fas fa-envelope"></i> Email Sales Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 PrimeDesk Smart POS. All rights reserved. Built with precision for modern commerce.
+        </div>
+        <div class="footer-status-pill">
+          <span class="status-dot"></span>
+          <span>System Status: Desktop &amp; Online Editions Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

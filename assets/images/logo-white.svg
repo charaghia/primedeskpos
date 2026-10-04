@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 110" fill="none">
+  <defs>
+    <linearGradient id="pdLogoGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2da8ff" />
+      <stop offset="100%" stop-color="#0f6fe8" />
+    </linearGradient>
+    <filter id="pdGlowDark" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Icon Mark Container -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="90" height="90" rx="22" fill="#0b1329" stroke="url(#pdLogoGradDark)" stroke-width="2.5" />
+    <rect x="18" y="16" width="54" height="38" rx="8" fill="#111c38" stroke="#2da8ff" stroke-width="2.5" />
+    <path d="M26 38 L36 30 L46 36 L64 24" stroke="#2da8ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <circle cx="64" cy="24" r="3" fill="#38bdf8" filter="url(#pdGlowDark)" />
+    <path d="M37 54 L33 66 L57 66 L53 54 Z" fill="url(#pdLogoGradDark)" />
+    <rect x="24" y="66" width="42" height="7" rx="3.5" fill="#2da8ff" />
+    <path d="M36 16 L36 9 C36 7.5 37.5 6 39 6 L51 6 C52.5 6 54 7.5 54 9 L54 16 Z" fill="#d9efff" />
+    <line x1="40" y1="10" x2="50" y2="10" stroke="#0f6fe8" stroke-width="1.5" stroke-linecap="round" />
+    <line x1="40" y1="13" x2="47" y2="13" stroke="#0f6fe8" stroke-width="1.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Typography: PRIMEDESK SMART POS -->
+  <g transform="translate(118, 20)">
+    <text x="0" y="38" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="36" font-weight="800" letter-spacing="-0.5">
+      <tspan fill="#ffffff">Prime</tspan><tspan fill="#2da8ff">Desk</tspan>
+    </text>
+    
+    <g transform="translate(0, 52)">
+      <rect x="0" y="0" width="102" height="22" rx="6" fill="#0f6fe8" fill-opacity="0.25" stroke="#2da8ff" stroke-width="1" />
+      <text x="8" y="15" font-family="'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700" fill="#38bdf8" letter-spacing="1.2">SMART POS</text>
+      <text x="114" y="15" font-family="'Manrope', 'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8" letter-spacing="0.5">Desktop &amp; Online Editions</text>
+    </g>
+  </g>
+</svg>

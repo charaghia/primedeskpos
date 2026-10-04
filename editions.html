@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('primedesk_theme');
+      var theme = (saved === 'dark') ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Desktop vs Online Cloud Edition — PrimeDesk Smart POS Comparison</title>
+  <meta name="description" content="Compare PrimeDesk Smart POS Desktop Edition (100% offline Windows app with encrypted SQLite) and Online Cloud Edition (Google Sheets web shell). Free on-demand trials available.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-notice-bar" aria-label="Announcement">
+    <span><i class="fas fa-sparkles"></i> <strong>Trial Policy:</strong> Both Desktop &amp; Online Editions feature <strong>Full On-Demand Free Trials</strong> with owner activation approval.</span>
+    <a href="contact.html?intent=trial"><i class="fas fa-key"></i> Request Trial</a>
+  </aside>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="PrimeDesk Smart POS Homepage">
+        <img src="assets/images/logo-light.svg" class="brand-logo-light" alt="PrimeDesk Smart POS Logo">
+        <img src="assets/images/logo-white.svg" class="brand-logo-dark" alt="PrimeDesk Smart POS Logo">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Overview</a>
+        <a href="editions.html" class="nav-link active">Desktop vs Online</a>
+        <a href="modules.html" class="nav-link">App Modules</a>
+        <a href="index.html#gallery" class="nav-link">Screenshots</a>
+        <a href="index.html#hardware" class="nav-link">Hardware</a>
+        <a href="index.html#pricing" class="nav-link">Pricing &amp; Trials</a>
+        <a href="contact.html" class="nav-link">Contact &amp; Purchase</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="contact.html?intent=trial" class="btn btn-primary btn-sm"><i class="fas fa-key"></i> Request Trial</a>
+        <button class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header Banner -->
+  <section class="section" style="padding: 60px 0 40px; background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-main) 100%);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 20px;">
+        <span class="section-tag"><i class="fas fa-code-compare"></i> In-Depth Architectural Comparison</span>
+        <h1 class="section-title">PrimeDesk Desktop vs. Online Cloud Edition</h1>
+        <p class="section-desc">
+          Two dedicated product lines built around your operational needs. Whether your priority is 100% offline checkout speed on a shop counter or remote browser access from any device, discover which edition matches your business model.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Side-by-Side Breakdown -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="editions-showcase-grid" style="margin-bottom: 60px;">
+        
+        <!-- Desktop Edition Column -->
+        <div class="edition-card" id="desktop">
+          <div class="edition-badge-corner">
+            <span class="badge badge-primary"><i class="fas fa-shield-halved"></i> 100% Offline</span>
+          </div>
+
+          <div class="edition-header">
+            <div class="edition-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <div>
+              <h2 class="edition-name">Desktop Edition</h2>
+              <p class="edition-tagline">Windows Standalone (Electron + Encrypted SQLite)</p>
+            </div>
+          </div>
+
+          <p class="edition-desc">
+            A native 64-bit Windows software installer designed for maximum transaction velocity, direct hardware control, and zero dependence on cloud connectivity. Your sales records never stall during an internet outage.
+          </p>
+
+          <h4 style="font-size:1.1rem; margin-bottom:14px; color:var(--text-primary);"><i class="fas fa-microchip" style="color:var(--theme-primary);"></i> Key Architectural Highlights:</h4>
+          
+          <div class="edition-specs-list">
+            <div class="spec-item">
+              <i class="fas fa-database"></i>
+              <div><strong>Machine-Bound Encrypted SQLite:</strong> All sales, items, customers, and ledgers are stored locally in an encrypted database tied to your PC's hardware ID.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-bolt"></i>
+              <div><strong>Zero-Latency Performance:</strong> Instant product lookup and millisecond barcode response times regardless of your inventory catalog size.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-network-wired"></i>
+              <div><strong>Local LAN Client Multi-Counter:</strong> Add up to 5 employee counter terminals operating over the shop's local Wi-Fi or Ethernet switch without touching the internet.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-print"></i>
+              <div><strong>Direct ESC/POS Thermal Printing:</strong> Native high-speed thermal receipt printing (58mm / 80mm) with automatic paper cut and cash drawer kickout.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-clock-rotate-left"></i>
+              <div><strong>Daily Encrypted Auto-Backups:</strong> Configurable automated backups protect your data against hardware failure with easy one-click restore.</div>
+            </div>
+          </div>
+
+          <div class="edition-trial-alert">
+            <div class="trial-icon"><i class="fas fa-gift"></i></div>
+            <div class="trial-text">
+              <h5>2-Day Full Feature Trial on Demand</h5>
+              <p>Install the real EXE on your Windows computer. All 40+ modules are fully unlocked with test data or your real catalog.</p>
+            </div>
+          </div>
+
+          <a href="contact.html?edition=desktop&intent=trial" class="btn btn-edition-desktop" style="width:100%;">
+            <i class="fas fa-download"></i> Request 2-Day Desktop Trial
+          </a>
+        </div>
+
+        <!-- Online Edition Column -->
+        <div class="edition-card" id="online">
+          <div class="edition-badge-corner">
+            <span class="badge badge-emerald"><i class="fas fa-globe"></i> Browser Accessible</span>
+          </div>
+
+          <div class="edition-header">
+            <div class="edition-icon" style="color:var(--accent-emerald); background:var(--accent-emerald-soft);">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div>
+              <h2 class="edition-name">Online Cloud Edition</h2>
+              <p class="edition-tagline">Google Sheets &amp; Web App Shell (Owner Managed)</p>
+            </div>
+          </div>
+
+          <p class="edition-desc">
+            A flexible cloud application shell pairing the convenience of Google Sheets with a reactive web UI and owner-managed protected calculation services. Accessible from anywhere in the world.
+          </p>
+
+          <h4 style="font-size:1.1rem; margin-bottom:14px; color:var(--text-primary);"><i class="fas fa-cloud-arrow-up" style="color:var(--accent-emerald);"></i> Key Architectural Highlights:</h4>
+
+          <div class="edition-specs-list">
+            <div class="spec-item">
+              <i class="fas fa-table"></i>
+              <div><strong>Private Google Sheets Storage:</strong> Business records are saved directly in your personal Google Drive sheet, giving you total data ownership and export flexibility.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-laptop"></i>
+              <div><strong>Any Device, Anywhere:</strong> Run the POS and view reports from any modern browser on Windows, Mac, iPads, Android tablets, or smartphones.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-shield-halved"></i>
+              <div><strong>Protected Owner Backend:</strong> Complex business formulas, financial calculations, and validation rules run through protected owner-managed endpoints.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-clock-rotate-left"></i>
+              <div><strong>Built-in Cloud Revisions:</strong> Automatic Google Drive revision history eliminates manual backup worries while safeguarding data integrity.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fab fa-whatsapp" style="color:#25d366;"></i>
+              <div><strong>Paperless WhatsApp Delivery:</strong> Instantly share digital invoice links, PDF receipts, and ledger statements to customer smartphones.</div>
+            </div>
+          </div>
+
+          <div class="edition-trial-alert">
+            <div class="trial-icon" style="color:var(--accent-emerald);"><i class="fas fa-hand-holding-heart"></i></div>
+            <div class="trial-text">
+              <h5>On-Demand Cloud Trial Available</h5>
+              <p>Test the web application shell and Google Sheet integration live before choosing your deployment model.</p>
+            </div>
+          </div>
+
+          <a href="contact.html?edition=online&intent=trial" class="btn btn-edition-online" style="width:100%;">
+            <i class="fas fa-arrow-up-right-from-square"></i> Request Online Cloud Trial
+          </a>
+        </div>
+      </div>
+
+      <!-- Exhaustive Feature & Technical Matrix -->
+      <div class="section-header" style="margin-bottom: 30px;">
+        <span class="section-tag"><i class="fas fa-table-list"></i> Feature by Feature</span>
+        <h2 class="section-title">Technical Specification Matrix</h2>
+      </div>
+
+      <div class="table-responsive">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature / Characteristic</th>
+              <th><i class="fas fa-desktop"></i> Desktop Edition</th>
+              <th><i class="fas fa-cloud"></i> Online Cloud Edition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Platform &amp; Runtime</td>
+              <td class="highlight-col">Windows Standalone App (Electron 64-bit)</td>
+              <td>Modern Web Browser (Chrome, Edge, Safari)</td>
+            </tr>
+            <tr>
+              <td>Database &amp; Data Storage</td>
+              <td class="highlight-col">Local Encrypted SQLite Database</td>
+              <td>Customer's Private Google Sheet</td>
+            </tr>
+            <tr>
+              <td>Internet Dependency</td>
+              <td class="highlight-col"><strong>100% Offline-First</strong> (Zero internet required for sales)</td>
+              <td>Requires active internet connection</td>
+            </tr>
+            <tr>
+              <td>Hardware Device Binding</td>
+              <td class="highlight-col">Locked to PC hardware identity (Admin PC)</td>
+              <td>Tied to approved Google account &amp; spreadsheet ID</td>
+            </tr>
+            <tr>
+              <td>Multi-Terminal Setup</td>
+              <td class="highlight-col">Shop LAN Client Add-on (Up to 5 counter PCs)</td>
+              <td>Multi-device concurrent browser logins</td>
+            </tr>
+            <tr>
+              <td>Barcode Scanner Support</td>
+              <td class="highlight-col">Instant plug-and-play USB &amp; 2.4GHz wireless scanners</td>
+              <td>Standard USB barcode scanners via browser input</td>
+            </tr>
+            <tr>
+              <td>Thermal Receipt Printing</td>
+              <td class="highlight-col">Direct ESC/POS 58mm &amp; 80mm with cash drawer kick</td>
+              <td>Browser print dialog to thermal or A4 printer</td>
+            </tr>
+            <tr>
+              <td>A4 Invoice &amp; Quotation Printing</td>
+              <td class="highlight-col">Native Windows print &amp; PDF export</td>
+              <td>Browser PDF generation &amp; printing</td>
+            </tr>
+            <tr>
+              <td>WhatsApp Digital Invoices</td>
+              <td class="highlight-col">Integrated WhatsApp Web direct dispatch</td>
+              <td>Integrated WhatsApp Web direct dispatch</td>
+            </tr>
+            <tr>
+              <td>Batch &amp; Expiry Date Alerts</td>
+              <td class="highlight-col"><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+              <td><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+            </tr>
+            <tr>
+              <td>Held Receipts / Cart Parking</td>
+              <td class="highlight-col"><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+              <td><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+            </tr>
+            <tr>
+              <td>Customer Ledgers &amp; Credit Limits</td>
+              <td class="highlight-col"><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+              <td><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+            </tr>
+            <tr>
+              <td>Supplier Ledgers &amp; Purchase Orders</td>
+              <td class="highlight-col"><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+              <td><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+            </tr>
+            <tr>
+              <td>Expense &amp; Fixed Asset Tracking</td>
+              <td class="highlight-col"><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+              <td><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included</td>
+            </tr>
+            <tr>
+              <td>Reports Hub &amp; Charts</td>
+              <td class="highlight-col"><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included (Chart.js visual graphs)</td>
+              <td><i class="fas fa-check" style="color:var(--accent-emerald);"></i> Included (Chart.js visual graphs)</td>
+            </tr>
+            <tr>
+              <td>Data Backup Mechanism</td>
+              <td class="highlight-col">Automated daily encrypted local backups + manual exports</td>
+              <td>Automatic Google Drive cloud version history</td>
+            </tr>
+            <tr>
+              <td>Free Trial Policy</td>
+              <td class="highlight-col"><strong>2-Day Full Feature Trial on Demand</strong></td>
+              <td><strong>On-Demand Cloud Trial Provided</strong></td>
+            </tr>
+            <tr>
+              <td>Licensing Model</td>
+              <td class="highlight-col">One-Time Lifetime License per PC</td>
+              <td>Lifetime or flexible deployment license</td>
+            </tr>
+            <tr>
+              <td>Best Fit For</td>
+              <td class="highlight-col">Retail stores, supermarkets, pharmacies, grocery counters</td>
+              <td>Mobile distributors, field agents, multi-branch owners</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Decision Assistant -->
+      <div style="margin-top: 60px; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-xl); padding: 40px;">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 36px;">
+          <h3 style="font-size: 1.6rem; margin-bottom: 10px;">Which Edition Is Right for Your Business?</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">
+            Answer a few operational questions to find your optimal PrimeDesk deployment setup.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px;">
+          <div style="background: var(--bg-elevated); padding: 24px; border-radius: var(--radius-md); border-left: 4px solid var(--theme-primary);">
+            <h4 style="font-size: 1.15rem; margin-bottom: 10px; color: var(--theme-primary);">
+              <i class="fas fa-check-to-slot"></i> Choose Desktop Edition if:
+            </h4>
+            <ul style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">
+              <li>• You operate a physical retail counter where checkout speed is critical.</li>
+              <li>• Your internet connection is intermittent or you want 100% offline immunity.</li>
+              <li>• You use thermal receipt printers (58mm/80mm) and high-speed USB barcode scanners.</li>
+              <li>• You want to connect multiple cashier counter terminals over local shop Wi-Fi without cloud lag.</li>
+              <li>• You want all data stored exclusively on your own premises in encrypted SQLite.</li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-elevated); padding: 24px; border-radius: var(--radius-md); border-left: 4px solid var(--accent-emerald);">
+            <h4 style="font-size: 1.15rem; margin-bottom: 10px; color: var(--accent-emerald);">
+              <i class="fas fa-check-to-slot"></i> Choose Online Cloud Edition if:
+            </h4>
+            <ul style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7;">
+              <li>• You need to check sales, inventory, and customer ledgers from anywhere via laptop or tablet.</li>
+              <li>• You love working with Google Sheets and want your raw business data stored in your Google Drive.</li>
+              <li>• You don't want to install software on individual employee PCs.</li>
+              <li>• You run wholesale distribution or field sales operations on mobile devices.</li>
+              <li>• You prioritize automatic cloud synchronization and zero-maintenance backups.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 36px;">
+          <a href="contact.html?intent=guidance" class="btn btn-primary btn-lg">
+            <i class="fas fa-headset"></i> Need Help Choosing? Talk to Our Specialist
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rich Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/images/logo-white.svg" alt="PrimeDesk Smart POS">
+          </a>
+          <p>
+            The next-generation retail management and point-of-sale ecosystem. Providing 100% offline desktop speed and modern cloud versatility.
+          </p>
+          <div class="footer-edition-pills">
+            <span class="badge badge-primary"><i class="fas fa-desktop"></i> Desktop Edition (Offline)</span>
+            <span class="badge badge-emerald"><i class="fas fa-cloud"></i> Online Edition (Cloud)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="editions.html">Desktop vs Online</a></li>
+            <li><a href="modules.html">40+ App Modules</a></li>
+            <li><a href="index.html#gallery">Screenshot Tour</a></li>
+            <li><a href="index.html#pricing">Lifetime Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Modules</h4>
+          <ul class="footer-links-list">
+            <li><a href="modules.html#pos">POS Checkout &amp; Scanner</a></li>
+            <li><a href="modules.html#inventory">Batches &amp; Expiry Alerts</a></li>
+            <li><a href="modules.html#invoices">Quotations &amp; Billing</a></li>
+            <li><a href="modules.html#crm">WhatsApp Digital Receipts</a></li>
+            <li><a href="modules.html#finance">Expenses &amp; Ledger Audit</a></li>
+            <li><a href="modules.html#security">Encrypted SQLite Backups</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Licensing</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html?intent=trial"><i class="fas fa-key"></i> Request 2-Day Trial</a></li>
+            <li><a href="contact.html?intent=purchase"><i class="fas fa-shopping-cart"></i> Purchase Lifetime License</a></li>
+            <li><a href="contact.html?intent=lan"><i class="fas fa-network-wired"></i> LAN Multi-Counter Add-on</a></li>
+            <li><a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i> Live Chat on WhatsApp</a></li>
+            <li><a href="mailto:support@primedeskpos.com"><i class="fas fa-envelope"></i> Email Sales Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 PrimeDesk Smart POS. All rights reserved. Built with precision for modern commerce.
+        </div>
+        <div class="footer-status-pill">
+          <span class="status-dot"></span>
+          <span>System Status: Desktop &amp; Online Editions Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

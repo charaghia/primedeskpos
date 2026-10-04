@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('primedesk_theme');
+      var theme = (saved === 'dark') ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>PrimeDesk Smart POS — Desktop Offline & Online Cloud Editions | Retail & Inventory Suite</title>
+  <meta name="description" content="PrimeDesk Smart POS is a next-generation point-of-sale and retail inventory software available in 100% Offline Desktop Edition (Windows) and Online Cloud Edition. Request an on-demand 2-day free trial today!">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- FontAwesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-notice-bar" aria-label="Announcement">
+    <span><i class="fas fa-sparkles"></i> <strong>Dual Edition Release:</strong> PrimeDesk Smart POS is available in both <strong>Desktop Offline</strong> and <strong>Online Cloud</strong> editions.</span>
+    <a href="#contact"><i class="fas fa-bolt"></i> Request 2-Day Trial On Demand</a>
+  </aside>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="PrimeDesk Smart POS Homepage">
+        <img src="assets/images/logo-light.svg" class="brand-logo-light" alt="PrimeDesk Smart POS Logo">
+        <img src="assets/images/logo-white.svg" class="brand-logo-dark" alt="PrimeDesk Smart POS Logo">
+      </a>
+
+      <nav class="nav-links">
+        <a href="#overview" class="nav-link active">Overview</a>
+        <a href="editions.html" class="nav-link">Desktop vs Online</a>
+        <a href="modules.html" class="nav-link">App Modules</a>
+        <a href="#gallery" class="nav-link">Screenshots</a>
+        <a href="#hardware" class="nav-link">Hardware</a>
+        <a href="#pricing" class="nav-link">Pricing &amp; Trials</a>
+        <a href="contact.html" class="nav-link">Contact &amp; Purchase</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm"><i class="fas fa-key"></i> Request Trial</a>
+        <button class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="overview">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="hero-pill-badge">
+            <i class="fas fa-check-double"></i> Two Editions • One Seamless Experience
+          </div>
+          <h1 class="hero-title">
+            The Smartest POS Built for <span class="gradient-text">High-Speed Retail</span> &amp; Precision Management
+          </h1>
+          <p class="hero-subtitle">
+            Whether you need a <strong>100% Offline-First Windows Desktop application</strong> backed by encrypted SQLite, or a versatile <strong>Online Cloud edition</strong> for anywhere accessibility—PrimeDesk delivers lightning-fast barcode checkout, real-time batch expiry tracking, thermal receipt printing, and WhatsApp digital invoicing.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fas fa-bolt"></i> Get Free Trial On Demand
+            </a>
+            <a href="editions.html" class="btn btn-outline btn-lg">
+              <i class="fas fa-code-compare"></i> Compare Editions
+            </a>
+            <a href="modules.html" class="btn btn-outline btn-lg">
+              <i class="fas fa-cubes"></i> Explore 40+ Modules
+            </a>
+          </div>
+
+          <div class="hero-trust-row">
+            <div class="trust-item"><i class="fas fa-circle-check"></i> 100% Offline Desktop Mode</div>
+            <div class="trust-item"><i class="fas fa-circle-check"></i> Lifetime One-Time License</div>
+            <div class="trust-item"><i class="fas fa-circle-check"></i> Machine-Locked SQLite Data</div>
+            <div class="trust-item"><i class="fas fa-circle-check"></i> Thermal 58/80mm Printing</div>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Preview Showcase -->
+        <div class="hero-showcase">
+          <!-- Floating Badge Top -->
+          <div class="floating-stat-badge badge-top-right">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-shield-halved" style="color:var(--accent-emerald); font-size:1.4rem;"></i>
+              <div>
+                <strong style="display:block; font-size:0.95rem;">Zero Cloud Latency</strong>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Encrypted Machine SQLite</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Window Mockup -->
+          <div class="hero-preview-window">
+            <div class="window-header">
+              <div class="window-dots">
+                <span class="window-dot dot-red"></span>
+                <span class="window-dot dot-yellow"></span>
+                <span class="window-dot dot-green"></span>
+              </div>
+              <div class="window-title" id="heroEditionBadge">
+                <i class="fas fa-desktop"></i> Desktop Edition (100% Offline SQLite)
+              </div>
+              <span class="badge badge-emerald"><i class="fas fa-signal"></i> Ready</span>
+            </div>
+
+            <!-- Interactive Screen Preview Image -->
+            <img id="heroScreenImg" 
+                 src="assets/screenshots/dashboard.png" 
+                 alt="PrimeDesk Smart POS Main Dashboard" 
+                 class="hero-screen-img"
+                 data-lightbox-src="assets/screenshots/dashboard.png"
+                 data-lightbox-title="PrimeDesk Smart POS Executive Management Dashboard"
+                 title="Click to zoom preview">
+
+            <!-- Edition Preview Switcher Tabs -->
+            <div class="hero-edition-tabs">
+              <button class="hero-tab-btn active" data-edition="desktop">
+                <i class="fas fa-laptop-code"></i> Windows Desktop Edition
+              </button>
+              <button class="hero-tab-btn" data-edition="online">
+                <i class="fas fa-cloud"></i> Online Cloud Edition
+              </button>
+            </div>
+          </div>
+
+          <!-- Floating Badge Bottom -->
+          <div class="floating-stat-badge badge-bottom-left">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <i class="fab fa-whatsapp" style="color:#25d366; font-size:1.4rem;"></i>
+              <div>
+                <strong style="display:block; font-size:0.95rem;">WhatsApp Integration</strong>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Instant Digital Billing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Modules Showcase (Interactive Filter) -->
+  <section class="section" id="modules" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-cubes"></i> 40+ Integrated Features</span>
+        <h2 class="section-title">An End-to-End Retail Operating System</h2>
+        <p class="section-desc">
+          PrimeDesk Smart POS replaces messy spreadsheets and disconnected point solutions with a unified powerhouse. Explore the key application modules below.
+        </p>
+      </div>
+
+      <!-- Module Category Filter Buttons -->
+      <div class="modules-filter-bar">
+        <button class="module-filter-btn active" data-filter="all">All Modules</button>
+        <button class="module-filter-btn" data-filter="pos"><i class="fas fa-cash-register"></i> POS &amp; Billing</button>
+        <button class="module-filter-btn" data-filter="inventory"><i class="fas fa-boxes-stacked"></i> Inventory &amp; Batches</button>
+        <button class="module-filter-btn" data-filter="purchasing"><i class="fas fa-truck-ramp-box"></i> Purchasing &amp; Vendors</button>
+        <button class="module-filter-btn" data-filter="crm"><i class="fas fa-users"></i> Customers &amp; Ledgers</button>
+        <button class="module-filter-btn" data-filter="finance"><i class="fas fa-wallet"></i> Finance &amp; Assets</button>
+        <button class="module-filter-btn" data-filter="reports"><i class="fas fa-chart-pie"></i> Reports &amp; Analytics</button>
+      </div>
+
+      <!-- Modules Grid -->
+      <div class="modules-grid">
+        <!-- Module 1: POS Checkout -->
+        <div class="module-card" data-category="pos">
+          <div class="module-icon-wrap"><i class="fas fa-cash-register"></i></div>
+          <h4 class="module-title">POS Checkout &amp; Register</h4>
+          <p class="module-description">
+            High-speed barcode scanning, instant search, multi-tender split payments (Cash, Card, JazzCash, EasyPaisa, Bank Transfer), customer credit billing, and immediate thermal receipt printing.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Barcode Scanner</span>
+            <span class="module-chip">Hold &amp; Resume Cart</span>
+            <span class="module-chip">Thermal Receipts</span>
+            <span class="module-chip">A4 Invoices</span>
+          </div>
+        </div>
+
+        <!-- Module 2: Held Receipts -->
+        <div class="module-card" data-category="pos">
+          <div class="module-icon-wrap"><i class="fas fa-pause-circle"></i></div>
+          <h4 class="module-title">Held Receipts &amp; Parking</h4>
+          <p class="module-description">
+            Never hold up a busy queue. Park unfinished customer transactions with one click and resume them instantly when the customer is ready to complete payment.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Multi-Cart Parking</span>
+            <span class="module-chip">Auto-Save State</span>
+            <span class="module-chip">Queue Management</span>
+          </div>
+        </div>
+
+        <!-- Module 3: Invoices & Quotations -->
+        <div class="module-card" data-category="pos">
+          <div class="module-icon-wrap"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h4 class="module-title">Quotations &amp; Estimates</h4>
+          <p class="module-description">
+            Generate formal sales quotations with customized branding, expiry dates, and line-item discounts. Convert accepted estimates into finalized tax invoices with a single click.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Draft/Sent/Accepted</span>
+            <span class="module-chip">One-Click Convert</span>
+            <span class="module-chip">PDF &amp; Print</span>
+          </div>
+        </div>
+
+        <!-- Module 4: Products & Catalog -->
+        <div class="module-card" data-category="inventory">
+          <div class="module-icon-wrap"><i class="fas fa-barcode"></i></div>
+          <h4 class="module-title">Products &amp; Barcode Catalog</h4>
+          <p class="module-description">
+            Manage single &amp; variant products, custom barcodes, SKU tracking, multi-tier categories, cost vs retail prices, low-stock reorder thresholds, and location bin numbers.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Barcode Generator</span>
+            <span class="module-chip">Reorder Alerts</span>
+            <span class="module-chip">Bin Locations</span>
+          </div>
+        </div>
+
+        <!-- Module 5: Batch & Expiry Tracking -->
+        <div class="module-card" data-category="inventory">
+          <div class="module-icon-wrap"><i class="fas fa-calendar-xmark"></i></div>
+          <h4 class="module-title">Batch &amp; Expiry Tracking</h4>
+          <p class="module-description">
+            Crucial for pharmaceuticals, cosmetics, and grocery stores. Track stock batches, manufacturing/expiry dates, and receive automated visual alerts before products reach expiration.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Expiry Calendar</span>
+            <span class="module-chip">Active/Depleted Batches</span>
+            <span class="module-chip">FIFO Stock Depletion</span>
+          </div>
+        </div>
+
+        <!-- Module 6: Stock Adjustments -->
+        <div class="module-card" data-category="inventory">
+          <div class="module-icon-wrap"><i class="fas fa-sliders"></i></div>
+          <h4 class="module-title">Stock Adjustments &amp; Audits</h4>
+          <p class="module-description">
+            Record manual stock additions and subtractions (+/-) with strict audit tracking for damage, physical count correction, returns, theft, and opening balances.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Audit Trails</span>
+            <span class="module-chip">Loss &amp; Damage Logs</span>
+            <span class="module-chip">Manager Approvals</span>
+          </div>
+        </div>
+
+        <!-- Module 7: Suppliers & Purchase Orders -->
+        <div class="module-card" data-category="purchasing">
+          <div class="module-icon-wrap"><i class="fas fa-truck-ramp-box"></i></div>
+          <h4 class="module-title">Purchasing &amp; Vendor Ledgers</h4>
+          <p class="module-description">
+            Issue Purchase Orders (PO), track delivery status (Pending, Dispatched, Received), update product purchase costs, manage vendor credit balances, and handle purchase returns.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">PO Status Lifecycle</span>
+            <span class="module-chip">Vendor Aging Ledger</span>
+            <span class="module-chip">Purchase Returns</span>
+          </div>
+        </div>
+
+        <!-- Module 8: Customer CRM & Ledgers -->
+        <div class="module-card" data-category="crm">
+          <div class="module-icon-wrap"><i class="fas fa-address-book"></i></div>
+          <h4 class="module-title">Customer Accounts &amp; Ledgers</h4>
+          <p class="module-description">
+            Support Wholesale, Retail, and Distributor tiers. Set credit limits, review payment ledgers, record part-payments, and track customer outstanding balances over time.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Credit Limits</span>
+            <span class="module-chip">Payment History</span>
+            <span class="module-chip">Ledger Statement PDF</span>
+          </div>
+        </div>
+
+        <!-- Module 9: WhatsApp Assistant -->
+        <div class="module-card" data-category="crm">
+          <div class="module-icon-wrap" style="color:#25d366;"><i class="fab fa-whatsapp"></i></div>
+          <h4 class="module-title">WhatsApp Assistant</h4>
+          <p class="module-description">
+            Instantly dispatch receipts, invoices, quotations, and outstanding payment reminders directly to your customer's WhatsApp in one tap via WhatsApp Web integration.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Direct Send</span>
+            <span class="module-chip">Payment Reminders</span>
+            <span class="module-chip">Zero Paper Waste</span>
+          </div>
+        </div>
+
+        <!-- Module 10: Expenses & Financials -->
+        <div class="module-card" data-category="finance">
+          <div class="module-icon-wrap"><i class="fas fa-receipt"></i></div>
+          <h4 class="module-title">Expense Management &amp; Equity</h4>
+          <p class="module-description">
+            Log shop expenses (utilities, salaries, rent, maintenance), manage owner capital contributions &amp; drawings, and track payments made and received across multiple accounts.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Approval Workflows</span>
+            <span class="module-chip">Owner Drawings</span>
+            <span class="module-chip">Cash Flow Tracking</span>
+          </div>
+        </div>
+
+        <!-- Module 11: Business Assets -->
+        <div class="module-card" data-category="finance">
+          <div class="module-icon-wrap"><i class="fas fa-building"></i></div>
+          <h4 class="module-title">Fixed Assets &amp; Depreciation</h4>
+          <p class="module-description">
+            Keep clear audit records of capital business assets (machinery, POS hardware, furniture, vehicles) with purchase valuations, maintenance records, and depreciation tracking.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Asset Heads</span>
+            <span class="module-chip">Valuation Logs</span>
+            <span class="module-chip">Equipment Register</span>
+          </div>
+        </div>
+
+        <!-- Module 12: Reports & Analytics -->
+        <div class="module-card" data-category="reports">
+          <div class="module-icon-wrap"><i class="fas fa-chart-line"></i></div>
+          <h4 class="module-title">Reports Hub &amp; Executive Analytics</h4>
+          <p class="module-description">
+            Visual graphs powered by Chart.js. Real-time net profit analysis, sales velocity, tax summaries, stock valuation, and salesman performance commission reports.
+          </p>
+          <div class="module-features-chips">
+            <span class="module-chip">Profit &amp; Loss</span>
+            <span class="module-chip">Stock Valuation</span>
+            <span class="module-chip">Commission Tracking</span>
+            <span class="module-chip">Export to CSV/PDF</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="modules.html" class="btn btn-outline btn-lg">
+          <i class="fas fa-arrow-right"></i> View Full 40+ Modules Inventory &amp; Screenshots
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Editions Showcase -->
+  <section class="section" id="editions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-layer-group"></i> Two Purpose-Built Flavors</span>
+        <h2 class="section-title">Designed for Flexibility: Choose Your Perfect Edition</h2>
+        <p class="section-desc">
+          PrimeDesk Smart POS is uniquely engineered to serve both traditional local checkout counters and modern connected multi-location businesses. <strong>Full trials are provided on demand for both editions.</strong>
+        </p>
+      </div>
+
+      <div class="editions-showcase-grid">
+        <!-- Edition 1: Desktop Edition -->
+        <article class="edition-card">
+          <div class="edition-badge-corner">
+            <span class="badge badge-primary"><i class="fas fa-star"></i> Retail Favorite</span>
+          </div>
+
+          <div class="edition-header">
+            <div class="edition-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <div>
+              <h3 class="edition-name">Desktop Edition</h3>
+              <p class="edition-tagline">Windows Standalone EXE (Electron + Encrypted SQLite)</p>
+            </div>
+          </div>
+
+          <p class="edition-desc">
+            The definitive offline-first workstation software. Built for retail stores, supermarkets, pharmacies, and busy counters that demand zero reliance on the internet for checkout, barcode scanning, printing, and inventory control.
+          </p>
+
+          <div class="edition-specs-list">
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>100% Offline-First:</strong> Daily business operations run entirely offline with zero lag.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Hardware-Locked Encrypted SQLite:</strong> Total security tied to your specific PC hardware.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Local LAN Client Add-on:</strong> Connect up to 5 employee counter PCs on the same shop Wi-Fi.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Thermal &amp; A4 Printing:</strong> Direct native ESC/POS thermal (58mm/80mm) and A4 invoice printing.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Automated Local Backups:</strong> Daily encrypted backups to your choice of drive or external USB.</div>
+            </div>
+          </div>
+
+          <div class="edition-trial-alert">
+            <div class="trial-icon"><i class="fas fa-gift"></i></div>
+            <div class="trial-text">
+              <h5>2-Day Full Feature Trial on Demand</h5>
+              <p>Test the full desktop installer on your PC with all modules and print functions unlocked.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="contact.html?edition=desktop&intent=trial" class="btn btn-edition-desktop" style="flex:1;">
+              <i class="fas fa-download"></i> Request Desktop Trial
+            </a>
+            <a href="editions.html#desktop" class="btn btn-outline">
+              <i class="fas fa-circle-info"></i> Learn More
+            </a>
+          </div>
+        </article>
+
+        <!-- Edition 2: Online Edition -->
+        <article class="edition-card">
+          <div class="edition-badge-corner">
+            <span class="badge badge-emerald"><i class="fas fa-globe"></i> Cloud Agility</span>
+          </div>
+
+          <div class="edition-header">
+            <div class="edition-icon" style="color:var(--accent-emerald); background:var(--accent-emerald-soft);">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div>
+              <h3 class="edition-name">Online Cloud Edition</h3>
+              <p class="edition-tagline">Google Sheets &amp; Web App Shell (Owner Managed)</p>
+            </div>
+          </div>
+
+          <p class="edition-desc">
+            Perfect for entrepreneurs, wholesalers, and field sales teams who require seamless access from any web browser across laptops, tablets, or remote offices, backed by private Google Sheets data ownership.
+          </p>
+
+          <div class="edition-specs-list">
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Access Anywhere:</strong> Open your POS dashboard from any browser, tablet, or laptop.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Customer Data Ownership:</strong> Business data stored in your own secure Google Drive spreadsheet.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Protected Owner Backend:</strong> Intellectual property calculations and formulas safely protected.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>Automatic Cloud Revisions:</strong> Built-in version history and zero manual backup worries.</div>
+            </div>
+            <div class="spec-item">
+              <i class="fas fa-check-circle"></i>
+              <div><strong>WhatsApp Paperless Billing:</strong> Send invoice links &amp; receipts directly to customers.</div>
+            </div>
+          </div>
+
+          <div class="edition-trial-alert">
+            <div class="trial-icon" style="color:var(--accent-emerald);"><i class="fas fa-hand-holding-heart"></i></div>
+            <div class="trial-text">
+              <h5>On-Demand Cloud Trial Available</h5>
+              <p>Experience the web shell and spreadsheet workflows with a pre-configured demo account.</p>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="contact.html?edition=online&intent=trial" class="btn btn-edition-online" style="flex:1;">
+              <i class="fas fa-arrow-up-right-from-square"></i> Request Online Trial
+            </a>
+            <a href="editions.html#online" class="btn btn-outline">
+              <i class="fas fa-circle-info"></i> Learn More
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Screenshots Showcase with Lightbox Modal -->
+  <section class="section" id="gallery" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-image"></i> Real App Screenshots</span>
+        <h2 class="section-title">See PrimeDesk Smart POS in Action</h2>
+        <p class="section-desc">
+          No conceptual mockups. Here are authentic screenshots of the actual PrimeDesk production software in action. Click any screenshot to view in full resolution.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Screenshot 1: Dashboard -->
+        <div class="gallery-item" 
+             data-lightbox-src="assets/screenshots/dashboard.png"
+             data-lightbox-title="Executive Dashboard: KPI Cards, Revenue Chart, and Real-time Activity">
+          <div class="gallery-img-wrap">
+            <img src="assets/screenshots/dashboard.png" alt="PrimeDesk Dashboard Screenshot">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+          <div class="gallery-meta">
+            <h4 class="gallery-title">Executive Dashboard</h4>
+            <p class="gallery-subtitle">Sales trends, gross profit margins, and inventory health</p>
+          </div>
+        </div>
+
+        <!-- Screenshot 2: POS Register -->
+        <div class="gallery-item" 
+             data-lightbox-src="assets/screenshots/pos.png"
+             data-lightbox-title="POS Checkout Screen: Rapid Item Search, Barcode Input, and Multi-tender Split Payment">
+          <div class="gallery-img-wrap">
+            <img src="assets/screenshots/pos.png" alt="POS Checkout Screen Screenshot">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+          <div class="gallery-meta">
+            <h4 class="gallery-title">High-Speed POS Register</h4>
+            <p class="gallery-subtitle">Instant barcode scan, customer ledger lookup, &amp; thermal print</p>
+          </div>
+        </div>
+
+        <!-- Screenshot 3: Invoices & Receipts -->
+        <div class="gallery-item" 
+             data-lightbox-src="assets/screenshots/invoices.png"
+             data-lightbox-title="Invoices &amp; Receipts Ledger: Filter by Status, Date, Customer &amp; Balance">
+          <div class="gallery-img-wrap">
+            <img src="assets/screenshots/invoices.png" alt="Invoices List Screenshot">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+          <div class="gallery-meta">
+            <h4 class="gallery-title">Invoices &amp; Billing History</h4>
+            <p class="gallery-subtitle">Complete searchable history with reprint and refund actions</p>
+          </div>
+        </div>
+
+        <!-- Screenshot 4: Quotations -->
+        <div class="gallery-item" 
+             data-lightbox-src="assets/screenshots/quotations.png"
+             data-lightbox-title="Quotations Management: Status Tracking from Draft to Accepted Conversion">
+          <div class="gallery-img-wrap">
+            <img src="assets/screenshots/quotations.png" alt="Quotations Screen Screenshot">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+          <div class="gallery-meta">
+            <h4 class="gallery-title">Formal Quotations</h4>
+            <p class="gallery-subtitle">Create B2B price estimates with automatic invoice conversion</p>
+          </div>
+        </div>
+
+        <!-- Screenshot 5: Batch & Expiry -->
+        <div class="gallery-item" 
+             data-lightbox-src="assets/screenshots/route-batches.png"
+             data-lightbox-title="Batch and Expiry Tracking: Active vs Depleted Batches and Early Expiry Warnings">
+          <div class="gallery-img-wrap">
+            <img src="assets/screenshots/route-batches.png" alt="Batch Expiry Screenshot">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+          <div class="gallery-meta">
+            <h4 class="gallery-title">Batch &amp; Expiry Management</h4>
+            <p class="gallery-subtitle">Track manufacturing lots, alert on upcoming expirations</p>
+          </div>
+        </div>
+
+        <!-- Screenshot 6: Reports Hub -->
+        <div class="gallery-item" 
+             data-lightbox-src="assets/screenshots/route-reports.png"
+             data-lightbox-title="Reports Hub: Visual Graphs, Salesman Commissions, and Comprehensive Export Sheets">
+          <div class="gallery-img-wrap">
+            <img src="assets/screenshots/route-reports.png" alt="Reports Hub Screenshot">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon"><i class="fas fa-magnifying-glass-plus"></i></div>
+            </div>
+          </div>
+          <div class="gallery-meta">
+            <h4 class="gallery-title">Analytics &amp; Financial Reports</h4>
+            <p class="gallery-subtitle">Net profit, margin velocity, tax breakdown, and audit exports</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hardware Compatibility Ecosystem -->
+  <section class="section" id="hardware">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-print"></i> Universal Compatibility</span>
+        <h2 class="section-title">Hardware You Already Own or Want to Buy</h2>
+        <p class="section-desc">
+          PrimeDesk connects natively with standard retail peripherals on Windows and web browsers. No proprietary or locked-in hardware required.
+        </p>
+      </div>
+
+      <div class="hardware-grid">
+        <div class="hardware-card">
+          <div class="hardware-icon"><i class="fas fa-receipt"></i></div>
+          <h4 class="hardware-name">Thermal Printers (58mm &amp; 80mm)</h4>
+          <p class="hardware-desc">Epson, Xprinter, Rongta, POS-58, and all ESC/POS thermal receipt printers over USB, LAN, or Serial.</p>
+        </div>
+
+        <div class="hardware-card">
+          <div class="hardware-icon"><i class="fas fa-barcode"></i></div>
+          <h4 class="hardware-name">1D &amp; 2D Barcode Scanners</h4>
+          <p class="hardware-desc">Handheld USB scanners, wireless 2.4GHz guns, omnidirectional desktop scanners, and QR code readers.</p>
+        </div>
+
+        <div class="hardware-card">
+          <div class="hardware-icon"><i class="fas fa-coins"></i></div>
+          <h4 class="hardware-name">Cash Drawers (RJ11 / RJ12)</h4>
+          <p class="hardware-desc">Direct kick-out trigger from the receipt printer upon sale completion, manual key release, or cash drop.</p>
+        </div>
+
+        <div class="hardware-card">
+          <div class="hardware-icon"><i class="fas fa-network-wired"></i></div>
+          <h4 class="hardware-name">Multi-Terminal LAN Counter PCs</h4>
+          <p class="hardware-desc">Connect up to 5 cashier workstations on the shop LAN or Wi-Fi with shared inventory and centralized printing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing & Transparent Licensing -->
+  <section class="section" id="pricing" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-tags"></i> Straightforward &amp; Transparent</span>
+        <h2 class="section-title">One-Time Purchase Lifetime Ownership<br><span style="display:inline-block; margin-top:4px;">Zero Data Rent</span></h2>
+        <p class="section-desc">
+          Stop paying burdensome monthly software subscriptions. Purchase a lifetime license for your retail store, or request an on-demand trial to evaluate first.
+        </p>
+      </div>
+
+      <div class="pricing-grid">
+        <!-- Plan 1: Desktop Main Workstation -->
+        <div class="pricing-card popular">
+          <span class="popular-badge">Most Popular</span>
+          <h3 class="pricing-plan-name">Desktop Edition</h3>
+          <p class="pricing-plan-desc">Single Main/Admin Workstation for retail counters &amp; shops</p>
+          
+          <div class="price-tag">
+            <span class="price-val">Lifetime</span>
+            <span class="price-period">One-time purchase</span>
+          </div>
+          <div class="price-note"><i class="fas fa-check"></i> Free 2-Day Trial Provided on Demand</div>
+
+          <ul class="pricing-features-list">
+            <li><i class="fas fa-check"></i> 100% Offline-First Operation (No internet required)</li>
+            <li><i class="fas fa-check"></i> Hardware-Tied Encrypted SQLite Database</li>
+            <li><i class="fas fa-check"></i> All 40+ POS &amp; Inventory Modules Included</li>
+            <li><i class="fas fa-check"></i> ESC/POS 58mm/80mm &amp; A4 Invoice Printing</li>
+            <li><i class="fas fa-check"></i> Barcode Scanner &amp; Cash Drawer Support</li>
+            <li><i class="fas fa-check"></i> Automated Daily Encrypted Backups</li>
+            <li><i class="fas fa-check"></i> WhatsApp Direct Digital Invoicing</li>
+            <li><i class="fas fa-check"></i> Free Minor Updates &amp; Setup Support</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary" style="width: 100%;">
+            <i class="fas fa-key"></i> Request Trial or Purchase
+          </a>
+        </div>
+
+        <!-- Plan 2: LAN Client Add-on -->
+        <div class="pricing-card">
+          <h3 class="pricing-plan-name">Desktop LAN Add-on</h3>
+          <p class="pricing-plan-desc">For multi-counter supermarkets &amp; department stores</p>
+          
+          <div class="price-tag">
+            <span class="price-val">Multi-PC</span>
+            <span class="price-period">LAN license add-on</span>
+          </div>
+          <div class="price-note"><i class="fas fa-network-wired"></i> Up to 5 Cashier Workstations</div>
+
+          <ul class="pricing-features-list">
+            <li><i class="fas fa-check"></i> Requires 1 Licensed Main Desktop Admin PC</li>
+            <li><i class="fas fa-check"></i> Install on up to 5 Employee POS Counter PCs</li>
+            <li><i class="fas fa-check"></i> Real-time Stock Sync over Local Shop Wi-Fi/LAN</li>
+            <li><i class="fas fa-check"></i> Centralized Admin Printing or Counter Printing</li>
+            <li><i class="fas fa-check"></i> Independent Cashier Logins &amp; Shift Audits</li>
+            <li><i class="fas fa-check"></i> Zero Internet Dependency on Employee PCs</li>
+            <li><i class="fas fa-check"></i> Lightweight dedicated LAN client installer</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-outline" style="width: 100%;">
+            <i class="fas fa-network-wired"></i> Inquire for LAN Setup
+          </a>
+        </div>
+
+        <!-- Plan 3: Online Cloud Edition -->
+        <div class="pricing-card">
+          <h3 class="pricing-plan-name">Online Cloud Edition</h3>
+          <p class="pricing-plan-desc">For mobile vendors, multi-branch owners, &amp; distributors</p>
+          
+          <div class="price-tag">
+            <span class="price-val">Cloud</span>
+            <span class="price-period">Lifetime / Flexible</span>
+          </div>
+          <div class="price-note"><i class="fas fa-cloud"></i> Google Sheets Powered</div>
+
+          <ul class="pricing-features-list">
+            <li><i class="fas fa-check"></i> Access from Anywhere via Modern Web Browser</li>
+            <li><i class="fas fa-check"></i> Customer-Owned Google Sheet Data Surface</li>
+            <li><i class="fas fa-check"></i> Protected Owner Backend Calculation Engine</li>
+            <li><i class="fas fa-check"></i> Automatic Google Drive Cloud Version History</li>
+            <li><i class="fas fa-check"></i> Multi-User &amp; Multi-Device Access</li>
+            <li><i class="fas fa-check"></i> WhatsApp Digital Receipt Dispatch</li>
+            <li><i class="fas fa-check"></i> On-Demand Cloud Trial Available</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-outline" style="width: 100%;">
+            <i class="fas fa-cloud"></i> Request Online Demo
+          </a>
+        </div>
+      </div>
+
+      <!-- Trial Guarantee Banner -->
+      <div class="trial-guarantee-banner">
+        <div class="trial-banner-content">
+          <h4><i class="fas fa-shield-heart" style="color:var(--theme-primary);"></i> Test-Drive PrimeDesk Risk-Free Before Purchasing</h4>
+          <p>We believe in total product confidence. We offer an owner-approved <strong>2-Day Full Feature Trial</strong> so you can install PrimeDesk on your computer, test your barcode scanner, and print real invoices with zero commitments.</p>
+        </div>
+        <a href="#contact" class="btn btn-primary" style="flex-shrink: 0;">
+          <i class="fas fa-bolt"></i> Claim Free Trial Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-circle-question"></i> Common Questions</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">
+          Clear, honest answers about licensing, hardware, trials, and data security.
+        </p>
+      </div>
+
+      <div class="faq-wrap">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>How does the On-Demand Free Trial work?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>You can request a 2-day fully featured trial of the Desktop Edition or Online Edition through our contact form or WhatsApp. For the Desktop Edition, you receive the full Windows installer. Upon owner approval, all 40+ modules (POS, Inventory, Invoices, Thermal Printing, Reports) are unlocked for 2 full days so you can evaluate the real software in your shop. If you decide to purchase, your entered trial data is seamlessly retained!</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does the Desktop Edition require an internet connection?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p><strong>No.</strong> Daily business operations in the Desktop Edition run 100% offline. The local SQLite database is encrypted and stored directly on your computer's hard drive. It does not require internet for checkout, barcode scanning, printing receipts, updating stock, or viewing reports. It only performs an intermittent background check for license validation and updates.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the LAN Client multi-counter setup work?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>With the paid Desktop LAN add-on, your licensed Main/Admin PC acts as the local shop server. You can install the lightweight LAN client on up to 5 cashier workstations connected to the same local shop Wi-Fi or Ethernet switch. Cashiers can scan items, ring up sales, and share the live inventory without needing any internet connection!</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What is the difference between Desktop and Online Editions?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>The <strong>Desktop Edition</strong> is a dedicated 64-bit Windows software package designed for high-performance offline retail counters with thermal printers. The <strong>Online Edition</strong> runs inside modern web browsers, with business data residing in your own private Google Sheet and calculations handled by owner-protected backend services, making it ideal for access on the go.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How are backups handled to prevent data loss?</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>The Desktop Edition includes automatic daily encrypted backups to your chosen destination folder (such as an external USB flash drive or secondary hard drive), plus instant manual backup creation from the Admin panel. The Online Edition automatically leverages Google Drive's built-in cloud version history.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Capture, Trial Request & Purchase Section -->
+  <section class="section" id="contact" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-comments"></i> Direct Inquiries &amp; Orders</span>
+        <h2 class="section-title">Request a Free Trial or Buy Your License</h2>
+        <p class="section-desc">
+          Fill out the quick form below to request an approved 2-day trial, ask technical questions, or place an order for a permanent lifetime license.
+        </p>
+      </div>
+
+      <div class="contact-section-grid">
+        <!-- Direct Contact Channels -->
+        <div class="contact-info-card">
+          <h3 style="font-size:1.4rem; margin-bottom:12px;">Get In Touch Directly</h3>
+          <p style="margin-bottom:28px; font-size:0.95rem;">
+            Have questions before ordering? Connect directly with our product specialist on WhatsApp or Email for instant assistance and personalized setup advice.
+          </p>
+
+          <div class="contact-channel">
+            <div class="channel-icon" style="color:#25d366; background:rgba(37,211,102,0.12);">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="channel-text">
+              <h5>WhatsApp Official Channel</h5>
+              <p>Instant replies for trial activation &amp; sales</p>
+              <a href="https://wa.me/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Chat on WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="channel-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="channel-text">
+              <h5>Email Support &amp; Orders</h5>
+              <p>For custom quotations and purchase invoices</p>
+              <a href="mailto:support@primedeskpos.com"><i class="fas fa-paper-plane"></i> support@primedeskpos.com</a>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="channel-icon" style="color:var(--accent-amber); background:var(--accent-amber-soft);">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="channel-text">
+              <h5>Support &amp; Trial Approvals</h5>
+              <p>Monday – Saturday | Rapid response within 2–4 hours</p>
+            </div>
+          </div>
+
+          <div style="margin-top:32px; padding:20px; border-radius:var(--radius-md); background:var(--bg-elevated); border:1px solid var(--border-card);">
+            <h5 style="margin-bottom:6px; color:var(--theme-primary);"><i class="fas fa-circle-info"></i> What Happens Next?</h5>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              When you submit the form, a pre-formatted message is prepared for WhatsApp or Email. We will verify your requirements and provide your download link and trial authorization key right away!
+            </p>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="contact-form-card">
+          <h3 style="font-size:1.4rem; margin-bottom:8px;">Trial Application &amp; Purchase Form</h3>
+          <p style="margin-bottom:24px; font-size:0.9rem; color:var(--text-muted);">
+            Please fill in your business details. No credit card required for trials.
+          </p>
+
+          <form id="primeDeskLeadForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="leadName"><i class="fas fa-user"></i> Full Name *</label>
+                <input type="text" id="leadName" class="form-control" placeholder="e.g. Tariq Mehmood" required>
+              </div>
+
+              <div class="form-group">
+                <label for="leadBusiness"><i class="fas fa-store"></i> Business / Store Name</label>
+                <input type="text" id="leadBusiness" class="form-control" placeholder="e.g. Al-Madina Supermarket">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="leadPhone"><i class="fas fa-phone"></i> WhatsApp / Mobile Number *</label>
+                <input type="tel" id="leadPhone" class="form-control" placeholder="+92 300 1234567" required>
+              </div>
+
+              <div class="form-group">
+                <label for="leadCity"><i class="fas fa-location-dot"></i> City &amp; Country</label>
+                <input type="text" id="leadCity" class="form-control" placeholder="e.g. Lahore, Pakistan">
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="leadEdition"><i class="fas fa-layer-group"></i> Preferred Edition *</label>
+                <select id="leadEdition" class="form-control">
+                  <option value="Desktop Edition (Offline Windows)" selected>Desktop Edition (Offline Windows EXE)</option>
+                  <option value="Online Cloud Edition">Online Cloud Edition (Google Sheets Backed)</option>
+                  <option value="Both Editions (Need Guidance)">Both Editions (Need Guidance)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="leadIntent"><i class="fas fa-bullseye"></i> I am looking to: *</label>
+                <select id="leadIntent" class="form-control">
+                  <option value="Request 2-Day Free Trial" selected>Request 2-Day Free Trial</option>
+                  <option value="Purchase Lifetime License">Purchase Lifetime License</option>
+                  <option value="Inquire about LAN Client Setup">Inquire about LAN Multi-Terminal</option>
+                  <option value="Custom Enterprise Inquiry">Custom Enterprise Inquiry</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="leadMessage"><i class="fas fa-comment-dots"></i> Questions or Hardware Requirements</label>
+              <textarea id="leadMessage" class="form-control" placeholder="Tell us about your business type (Retail, Pharmacy, Wholesale, Grocery), your receipt printer model, or number of cash counters..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+              <i class="fab fa-whatsapp"></i> Submit Request via WhatsApp
+            </button>
+          </form>
+
+          <!-- Success Alert Box (Hidden Initially) -->
+          <div id="formSuccessNotice" style="display:none; margin-top:20px; padding:16px; border-radius:var(--radius-md); background:var(--accent-emerald-soft); border:1px solid rgba(16,185,129,0.4); color:#ffffff;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-circle-check" style="color:var(--accent-emerald); font-size:1.3rem;"></i>
+              <div>
+                <strong>Inquiry Form Ready!</strong>
+                <p style="font-size:0.86rem; color:var(--text-secondary); margin-top:2px;">Opening WhatsApp chat with your formatted request. If it didn't open automatically, <a href="https://wa.me/" target="_blank" style="color:var(--theme-primary); text-decoration:underline;">click here to open WhatsApp</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot Lightbox Modal Container -->
+  <div id="screenshotModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Screenshot Preview">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" style="font-size:1.1rem; color:var(--text-primary);">Screenshot Preview</h4>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-img" src="" alt="PrimeDesk Screenshot Zoom">
+      </div>
+    </div>
+  </div>
+
+  <!-- Rich Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Editions -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/images/logo-white.svg" alt="PrimeDesk Smart POS">
+          </a>
+          <p>
+            The next-generation retail management and point-of-sale ecosystem. Providing 100% offline desktop speed and modern cloud versatility.
+          </p>
+
+          <div class="footer-edition-pills">
+            <span class="badge badge-primary"><i class="fas fa-desktop"></i> Desktop Edition (Offline)</span>
+            <span class="badge badge-emerald"><i class="fas fa-cloud"></i> Online Edition (Cloud)</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4>Product Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="editions.html">Desktop vs Online</a></li>
+            <li><a href="modules.html">40+ App Modules</a></li>
+            <li><a href="#gallery">Screenshot Tour</a></li>
+            <li><a href="#hardware">Hardware Compatibility</a></li>
+            <li><a href="#pricing">Lifetime Pricing</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Core Capabilities -->
+        <div class="footer-col">
+          <h4>Core Modules</h4>
+          <ul class="footer-links-list">
+            <li><a href="modules.html#pos">POS Checkout &amp; Scanner</a></li>
+            <li><a href="modules.html#inventory">Batches &amp; Expiry Alerts</a></li>
+            <li><a href="modules.html#invoices">Quotations &amp; Billing</a></li>
+            <li><a href="modules.html#crm">WhatsApp Digital Receipts</a></li>
+            <li><a href="modules.html#finance">Expenses &amp; Ledger Audit</a></li>
+            <li><a href="modules.html#security">Encrypted SQLite Backups</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Purchase & Trial Support -->
+        <div class="footer-col">
+          <h4>Contact &amp; Licensing</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html?intent=trial"><i class="fas fa-key"></i> Request 2-Day Trial</a></li>
+            <li><a href="contact.html?intent=purchase"><i class="fas fa-shopping-cart"></i> Purchase Lifetime License</a></li>
+            <li><a href="contact.html?intent=lan"><i class="fas fa-network-wired"></i> LAN Multi-Counter Add-on</a></li>
+            <li><a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i> Live Chat on WhatsApp</a></li>
+            <li><a href="mailto:support@primedeskpos.com"><i class="fas fa-envelope"></i> Email Sales Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 PrimeDesk Smart POS. All rights reserved. Built with precision for modern commerce.
+        </div>
+        <div class="footer-status-pill">
+          <span class="status-dot"></span>
+          <span>System Status: Desktop &amp; Online Editions Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Engine -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

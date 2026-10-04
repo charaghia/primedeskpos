@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('primedesk_theme');
+      var theme = (saved === 'dark') ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Contact, Trial Request &amp; Purchase — PrimeDesk Smart POS</title>
+  <meta name="description" content="Contact PrimeDesk Smart POS sales and support. Request an on-demand 2-day free trial or purchase a lifetime license for Desktop and Online editions.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .step-timeline-wrap {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin: 40px 0;
+    }
+    .timeline-step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      position: relative;
+    }
+    .step-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--theme-primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 900px) {
+      .step-timeline-wrap {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .step-timeline-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-notice-bar" aria-label="Announcement">
+    <span><i class="fas fa-sparkles"></i> <strong>Trial Guarantee:</strong> Experience all features with zero risk. Request your <strong>2-Day On-Demand Free Trial</strong> now!</span>
+  </aside>
+
+  <!-- Sticky Header Navigation -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand-logo" aria-label="PrimeDesk Smart POS Homepage">
+        <img src="assets/images/logo-light.svg" class="brand-logo-light" alt="PrimeDesk Smart POS Logo">
+        <img src="assets/images/logo-white.svg" class="brand-logo-dark" alt="PrimeDesk Smart POS Logo">
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Overview</a>
+        <a href="editions.html" class="nav-link">Desktop vs Online</a>
+        <a href="modules.html" class="nav-link">App Modules</a>
+        <a href="index.html#gallery" class="nav-link">Screenshots</a>
+        <a href="index.html#hardware" class="nav-link">Hardware</a>
+        <a href="index.html#pricing" class="nav-link">Pricing &amp; Trials</a>
+        <a href="contact.html" class="nav-link active">Contact &amp; Purchase</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <a href="contact.html?intent=trial" class="btn btn-primary btn-sm"><i class="fas fa-key"></i> Request Trial</a>
+        <button class="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header Banner -->
+  <section class="section" style="padding: 60px 0 40px; background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-main) 100%);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 20px;">
+        <span class="section-tag"><i class="fas fa-headset"></i> Sales, Orders &amp; Trials</span>
+        <h1 class="section-title">Get PrimeDesk Smart POS for Your Business</h1>
+        <p class="section-desc">
+          Ready to supercharge your checkout counter? Contact our team to purchase a lifetime license or request an approved 2-day trial for Desktop or Online edition.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Application Form Section -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="container">
+      <div class="contact-section-grid">
+        
+        <!-- Channels Info Card -->
+        <div class="contact-info-card">
+          <h3 style="font-size:1.4rem; margin-bottom:12px;">Direct Customer Support</h3>
+          <p style="margin-bottom:28px; font-size:0.95rem;">
+            Whether you need assistance choosing between Desktop and Online editions, setting up thermal printers, or purchasing multiple terminal licenses—we are here to help.
+          </p>
+
+          <div class="contact-channel">
+            <div class="channel-icon" style="color:#25d366; background:rgba(37,211,102,0.12);">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="channel-text">
+              <h5>Official WhatsApp Channel</h5>
+              <p>Fastest way to get trial activation &amp; license keys</p>
+              <a href="https://wa.me/" target="_blank" rel="noopener"><i class="fas fa-arrow-up-right-from-square"></i> Open WhatsApp Chat</a>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="channel-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="channel-text">
+              <h5>Email Orders &amp; Inquiries</h5>
+              <p>For official company purchase orders and tax invoices</p>
+              <a href="mailto:support@primedeskpos.com"><i class="fas fa-paper-plane"></i> support@primedeskpos.com</a>
+            </div>
+          </div>
+
+          <div class="contact-channel">
+            <div class="channel-icon" style="color:var(--accent-amber); background:var(--accent-amber-soft);">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="channel-text">
+              <h5>Remote Installation Assistance</h5>
+              <p>Free remote onboarding &amp; thermal printer setup via AnyDesk / TeamViewer</p>
+            </div>
+          </div>
+
+          <!-- Package & Delivery Assurance -->
+          <div style="margin-top:32px; padding:20px; border-radius:var(--radius-md); background:var(--bg-elevated); border:1px solid var(--border-card);">
+            <h5 style="margin-bottom:8px; color:var(--theme-primary);"><i class="fas fa-shield-check"></i> What's Included in Your Purchase:</h5>
+            <ul style="font-size:0.88rem; color:var(--text-secondary); line-height:1.7;">
+              <li>• Full 64-bit Windows NSIS Desktop Installer or Online Sheet deployment</li>
+              <li>• Lifetime machine license authorization key</li>
+              <li>• Thermal printer (58mm/80mm) configuration guide</li>
+              <li>• WhatsApp Assistant setup</li>
+              <li>• Automated daily encrypted backups setup</li>
+              <li>• Official customer user manual and setup documentation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="contact-form-card">
+          <h3 style="font-size:1.4rem; margin-bottom:8px;">License Order &amp; Trial Application</h3>
+          <p style="margin-bottom:24px; font-size:0.9rem; color:var(--text-muted);">
+            Complete the form below. A tailored inquiry will be formatted for WhatsApp or email.
+          </p>
+
+          <form id="primeDeskLeadForm">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="leadName"><i class="fas fa-user"></i> Full Name *</label>
+                <input type="text" id="leadName" class="form-control" placeholder="Your Name" required>
+              </div>
+
+              <div class="form-group">
+                <label for="leadBusiness"><i class="fas fa-store"></i> Business Name *</label>
+                <input type="text" id="leadBusiness" class="form-control" placeholder="Store / Company Name" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="leadPhone"><i class="fas fa-phone"></i> WhatsApp / Mobile Number *</label>
+                <input type="tel" id="leadPhone" class="form-control" placeholder="+92 300 0000000" required>
+              </div>
+
+              <div class="form-group">
+                <label for="leadCity"><i class="fas fa-location-dot"></i> City, Country *</label>
+                <input type="text" id="leadCity" class="form-control" placeholder="e.g. Lahore, Pakistan" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="leadEdition"><i class="fas fa-layer-group"></i> POS Edition *</label>
+                <select id="leadEdition" class="form-control">
+                  <option value="Desktop Edition (Offline Windows EXE)" selected>Desktop Edition (Offline Windows EXE)</option>
+                  <option value="Online Cloud Edition">Online Cloud Edition (Google Sheets Backed)</option>
+                  <option value="Both Editions (Need Guidance)">Both Editions (Need Guidance)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="leadIntent"><i class="fas fa-bullseye"></i> Inquiring For: *</label>
+                <select id="leadIntent" class="form-control">
+                  <option value="Request 2-Day Free Trial" selected>Request 2-Day Free Trial</option>
+                  <option value="Purchase Lifetime License">Purchase Lifetime License</option>
+                  <option value="Add LAN Multi-Counter Add-on">Add LAN Multi-Counter Add-on</option>
+                  <option value="Hardware Compatibility Check">Hardware Compatibility Check</option>
+                  <option value="Custom Quotation">Custom Quotation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="leadMessage"><i class="fas fa-comment-dots"></i> Business Details &amp; Hardware</label>
+              <textarea id="leadMessage" class="form-control" placeholder="Tell us about your business type (Retail Store, Pharmacy, Supermarket, Wholesale, Cafe), your receipt printer model, or number of cash counters..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
+              <i class="fab fa-whatsapp"></i> Submit Request via WhatsApp
+            </button>
+          </form>
+
+          <!-- Success Alert Box -->
+          <div id="formSuccessNotice" style="display:none; margin-top:20px; padding:16px; border-radius:var(--radius-md); background:var(--accent-emerald-soft); border:1px solid rgba(16,185,129,0.4); color:#ffffff;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-circle-check" style="color:var(--accent-emerald); font-size:1.3rem;"></i>
+              <div>
+                <strong>Inquiry Form Ready!</strong>
+                <p style="font-size:0.86rem; color:var(--text-secondary); margin-top:2px;">Opening WhatsApp chat with your formatted request. If it didn't open automatically, <a href="https://wa.me/" target="_blank" style="color:var(--theme-primary); text-decoration:underline;">click here to open WhatsApp</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How Trial & Activation Works Timeline -->
+      <div style="margin-top: 70px;">
+        <div class="section-header" style="margin-bottom: 24px;">
+          <span class="section-tag"><i class="fas fa-list-check"></i> Simple Process</span>
+          <h2 class="section-title">How the On-Demand Trial &amp; Activation Works</h2>
+        </div>
+
+        <div class="step-timeline-wrap">
+          <div class="timeline-step-card">
+            <div class="step-number">1</div>
+            <h4 style="font-size:1.1rem; margin-bottom:8px;">Submit Request</h4>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              Select your edition (Desktop or Online) and send your business details via WhatsApp or our web form.
+            </p>
+          </div>
+
+          <div class="timeline-step-card">
+            <div class="step-number">2</div>
+            <h4 style="font-size:1.1rem; margin-bottom:8px;">Owner Verification</h4>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              Our team reviews your submission and generates your approved download installer and trial key.
+            </p>
+          </div>
+
+          <div class="timeline-step-card">
+            <div class="step-number">3</div>
+            <h4 style="font-size:1.1rem; margin-bottom:8px;">2-Day Full Testing</h4>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              Install PrimeDesk and use all 40+ modules. Scan barcodes, test thermal printing, and view reports with zero limits.
+            </p>
+          </div>
+
+          <div class="timeline-step-card">
+            <div class="step-number">4</div>
+            <h4 style="font-size:1.1rem; margin-bottom:8px;">Seamless Lifetime Upgrade</h4>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              When you purchase your lifetime license, your trial data remains 100% intact. Zero re-entry needed!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rich Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/images/logo-white.svg" alt="PrimeDesk Smart POS">
+          </a>
+          <p>
+            The next-generation retail management and point-of-sale ecosystem. Providing 100% offline desktop speed and modern cloud versatility.
+          </p>
+          <div class="footer-edition-pills">
+            <span class="badge badge-primary"><i class="fas fa-desktop"></i> Desktop Edition (Offline)</span>
+            <span class="badge badge-emerald"><i class="fas fa-cloud"></i> Online Edition (Cloud)</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Overview</a></li>
+            <li><a href="editions.html">Desktop vs Online</a></li>
+            <li><a href="modules.html">40+ App Modules</a></li>
+            <li><a href="index.html#gallery">Screenshot Tour</a></li>
+            <li><a href="index.html#pricing">Lifetime Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Modules</h4>
+          <ul class="footer-links-list">
+            <li><a href="modules.html#pos">POS Checkout &amp; Scanner</a></li>
+            <li><a href="modules.html#inventory">Batches &amp; Expiry Alerts</a></li>
+            <li><a href="modules.html#invoices">Quotations &amp; Billing</a></li>
+            <li><a href="modules.html#crm">WhatsApp Digital Receipts</a></li>
+            <li><a href="modules.html#finance">Expenses &amp; Ledger Audit</a></li>
+            <li><a href="modules.html#security">Encrypted SQLite Backups</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact &amp; Licensing</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html?intent=trial"><i class="fas fa-key"></i> Request 2-Day Trial</a></li>
+            <li><a href="contact.html?intent=purchase"><i class="fas fa-shopping-cart"></i> Purchase Lifetime License</a></li>
+            <li><a href="contact.html?intent=lan"><i class="fas fa-network-wired"></i> LAN Multi-Counter Add-on</a></li>
+            <li><a href="https://wa.me/" target="_blank"><i class="fab fa-whatsapp"></i> Live Chat on WhatsApp</a></li>
+            <li><a href="mailto:support@primedeskpos.com"><i class="fas fa-envelope"></i> Email Sales Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 PrimeDesk Smart POS. All rights reserved. Built with precision for modern commerce.
+        </div>
+        <div class="footer-status-pill">
+          <span class="status-dot"></span>
+          <span>System Status: Desktop &amp; Online Editions Active</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Pre-populate form based on URL parameters (e.g. ?edition=desktop&intent=trial)
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const editionParam = urlParams.get('edition');
+      const intentParam = urlParams.get('intent');
+
+      const editionSelect = document.getElementById('leadEdition');
+      const intentSelect = document.getElementById('leadIntent');
+
+      if (editionParam && editionSelect) {
+        if (editionParam === 'desktop') {
+          editionSelect.value = 'Desktop Edition (Offline Windows EXE)';
+        } else if (editionParam === 'online') {
+          editionSelect.value = 'Online Cloud Edition';
+        }
+      }
+
+      if (intentParam && intentSelect) {
+        if (intentParam === 'trial') {
+          intentSelect.value = 'Request 2-Day Free Trial';
+        } else if (intentParam === 'purchase') {
+          intentSelect.value = 'Purchase Lifetime License';
+        } else if (intentParam === 'lan') {
+          intentSelect.value = 'Add LAN Multi-Counter Add-on';
+        }
+      }
+    });
+  </script>
+</body>
+</html>
