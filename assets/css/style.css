@@ -271,16 +271,26 @@ button, input, select, textarea {
 .brand-logo img {
   height: 48px;
   width: auto;
-  display: block;
   object-fit: contain;
   filter: drop-shadow(0 3px 8px rgba(15, 111, 232, 0.18));
 }
 
 /* Adaptive logo image switcher based on active theme */
-.brand-logo-dark { display: none; }
-.brand-logo-light { display: block; }
-[data-theme="dark"] .brand-logo-dark { display: block; }
-[data-theme="dark"] .brand-logo-light { display: none; }
+.brand-logo img.brand-logo-dark {
+  display: none !important;
+}
+
+.brand-logo img.brand-logo-light {
+  display: block !important;
+}
+
+[data-theme="dark"] .brand-logo img.brand-logo-dark {
+  display: block !important;
+}
+
+[data-theme="dark"] .brand-logo img.brand-logo-light {
+  display: none !important;
+}
 
 .nav-links {
   display: flex;
