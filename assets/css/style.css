@@ -269,10 +269,11 @@ button, input, select, textarea {
 }
 
 .brand-logo img {
-  height: 42px;
+  height: 48px;
   width: auto;
   display: block;
   object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(15, 111, 232, 0.18));
 }
 
 /* Adaptive logo image switcher based on active theme */
